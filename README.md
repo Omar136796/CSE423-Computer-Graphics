@@ -1,6 +1,6 @@
 # CSE423 – Computer Graphics Lab (BRAC University)
 
-Lab assignments from CSE423 (Computer Graphics) at BRAC University, written
+Lab assignments from CSE423 : Computer Graphics (Fall 2025) at BRAC University, written
 in **Python** with **PyOpenGL** and **GLUT**. They progress from a static 2D
 scene built from primitives, to animation and user input, to a raster line
 algorithm with collision detection, and finally a 3D game with a
