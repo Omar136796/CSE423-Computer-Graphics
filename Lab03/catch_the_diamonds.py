@@ -5,6 +5,8 @@ from OpenGL.GLUT import *
 from OpenGL.GLU import * 
 import random
 import time
+import os
+import sys
 
 #Bright Colors
 
@@ -345,7 +347,11 @@ def mouse_listener(button, state, x, y):
         elif ((width//2)-70)<=x_gl<=((width//2)-10) and ((height//2)-90)<=y_gl<=((height//2)-20):
             print(f"Goodbye! Score: {counter}")
             reset()
-            glutLeaveMainLoop()
+            if bool(glutLeaveMainLoop):     # freeglut (Windows/Linux)
+                glutLeaveMainLoop()
+            else:                           # Apple GLUT has no glutLeaveMainLoop
+                sys.stdout.flush()
+                os._exit(0)
 
 ################## Necessary Functions ####################
 
